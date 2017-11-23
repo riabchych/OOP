@@ -1,4 +1,4 @@
-public class DBConnector implements IDBConnector {
+public abstract class DBConnector implements IDBConnector {
     private boolean isConnected;
 
     public DBConnector() {
