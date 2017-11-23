@@ -5,14 +5,13 @@ public class Entity implements IActions {
     private Date createdAt;
     private Date updatedAt;
     private boolean isDeleted;
-    private DBConnector db;
+    private DBConnector DBConnector;
 
     public Entity() {
         this.id = 0;
         this.createdAt = new Date();
         this.updatedAt = new Date();
         this.isDeleted = false;
-        this.db = new DBConnector();
     }
 
     public Entity(int id, Date createdAt, Date updatedAt, boolean isDeleted) {
@@ -20,11 +19,10 @@ public class Entity implements IActions {
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
         this.isDeleted = isDeleted;
-        this.db = new DBConnector();
     }
 
     public DBConnector connection() {
-        return this.db;
+        return this.DBConnector;
     }
 
     public int getId() {
